@@ -5,7 +5,7 @@
 using json = nlohmann::json;
 
 int main() {
-    std::ifstream file("/Users/vivek/json_validator/sample_config.json");
+    std::ifstream file("../sample_config.json");
     json j;
     file >> j;
 
