@@ -30,6 +30,38 @@ A lightweight and educational JSON Schema validator written in modern C++.
 json_validator schema.json data.json
 ```
 
+**Example**
+>schema.json
+```
+{
+  "type": "object",
+  "required": ["users"],
+  "properties": {
+    "users": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "age"],
+        "properties": {
+          "name": { "type": "string" },
+          "age":  { "type": "integer" }
+        }
+      }
+    }
+  }
+}
+
+```
+>data.json
+```
+{
+  "users": [
+    { "name": "Alice", "age": 30 },
+    { "name": "Bob",   "age": 25 }
+  ]
+}
+
+```
 **Example Output**
 ```
 JSON is valid
