@@ -12,6 +12,7 @@ add_executable(json_schema_validator
     src/print.cpp
     src/schema.cpp
     src/schema_loader.cpp
+    src/validator.cpp
 )
 
 target_link_libraries(json_schema_validator PRIVATE nlohmann_json::nlohmann_json)
